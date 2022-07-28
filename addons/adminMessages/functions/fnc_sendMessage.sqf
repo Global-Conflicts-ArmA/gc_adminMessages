@@ -19,8 +19,9 @@ if ([] call FUNC(isAdminOrZeus)) then {
 
     private _receiveCondition = if ((call compile _lbData) < 0) then {
         switch (call compile _lbData) do {
-            case (-2): {{true}};                                                //EVERYONE
-            case (-3): {{[] call FUNC(isAdminOrZeus)}};        //OTHER ADMINS AND ZEUS
+            case (-2): {{true}};                              //EVERYONE
+            case (-8): {{[] call uo_fnc_hasGMAccess}};        //GMS AND ADMINS
+            case (-3): {{[] call FUNC(isAdminOrZeus)}};       //OTHER ADMINS AND ZEUS
             case (-4): {{playerSide == WEST}};
             case (-5): {{playerSide == EAST}};
             case (-6): {{playerSide == INDEPENDENT}};
@@ -37,6 +38,9 @@ if ([] call FUNC(isAdminOrZeus)) then {
 
     // send message to recipient
     [profileName,getPlayerUID player,_message,_receiveCondition,_receiveConditionParams] remoteExec [QFUNC(receiveMessage), 0, false];
+
+    // send copy to all GMs and Admins
+    [profileName,getPlayerUID player,_message,{{[] call uo_fnc_hasGMAccess}},_receiveConditionParams] remoteExec [QFUNC(receiveMessage), 0, false];
 
 } else {
     // display sent message locally

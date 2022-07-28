@@ -42,7 +42,8 @@ if (!isNil QGVAR(latestConvos) && {count GVAR(latestConvos) > 0}) then {
 //BY SIDE ======================================================================
 ["STR_grad_ADMINMESSAGES_BYCATEGORY"] call _fnc_addHeadline;
 [localize "STR_grad_ADMINMESSAGES_EVERYONE",-2] call _fnc_addEntry;
-[localize "STR_grad_ADMINMESSAGES_OTHERADMINS",-3] call _fnc_addEntry;
+[localize "STR_grad_ADMINMESSAGES_OTHERADMINS",-8] call _fnc_addEntry;
+[localize "STR_grad_ADMINMESSAGES_OTHERADMINSANDZEUS",-3] call _fnc_addEntry;
 ["BLUFOR",-4] call _fnc_addEntry;
 ["OPFOR",-5] call _fnc_addEntry;
 ["INDEPENDENT",-6] call _fnc_addEntry;

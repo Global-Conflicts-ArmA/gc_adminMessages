@@ -1,4 +1,5 @@
 #include "script_component.hpp"
 
-serverCommandAvailable "#kick" ||
+call uo_fnc_hasGMAccess ||
 !isNull (getAssignedCuratorlogic player)
+

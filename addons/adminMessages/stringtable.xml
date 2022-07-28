@@ -45,6 +45,11 @@
 				<German>ALLE</German>
 			</Key>
 			<Key ID="STR_grad_ADMINMESSAGES_OTHERADMINS">
+				<Original>ADMINS AND GMs</Original>
+				<English>ADMINS AND GMs</English>
+				<German>ADMINS UND GMs</German>
+			</Key>
+			<Key ID="STR_grad_ADMINMESSAGES_OTHERADMINSANDZEUS">
                 <Original>OTHER ADMINS AND ZEUS</Original>
 				<English>OTHER ADMINS AND ZEUS</English>
 				<German>ANDERE ADMINS UND ZEUSE</German>
