@@ -40,7 +40,7 @@ if ([] call FUNC(isAdminOrZeus)) then {
     [profileName,getPlayerUID player,_message,_receiveCondition,_receiveConditionParams] remoteExec [QFUNC(receiveMessage), 0, false];
 
     // send copy to all GMs and Admins
-    [profileName,getPlayerUID player,_message,{{[] call uo_fnc_hasGMAccess}},_receiveConditionParams] remoteExec [QFUNC(receiveMessage), 0, false];
+    [profileName,getPlayerUID player,_message] remoteExec [QFUNC(receiveMessage),0,false];
 
 } else {
     // display sent message locally
