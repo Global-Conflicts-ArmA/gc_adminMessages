@@ -1,1 +1,1 @@
-Fork Gruppe Adler Admin Messages to suit GC needs. 
+Fork from Gruppe Adler Admin Messages to suit GC needs. 
